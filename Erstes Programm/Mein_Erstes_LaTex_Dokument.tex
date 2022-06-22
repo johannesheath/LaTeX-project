@@ -11,12 +11,14 @@
 \usepackage{array}
 \UseRawInputEncoding
 
+
 % Für Quelltext
 \usepackage{listings}
 \usepackage{color}
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{myrice}{RGB}{236,236,144}
 \lstset{
   keywordstyle=\color{blue},commentstyle=\color{mygreen},
   stringstyle=\color{mymauve},rulecolor=\color{black},
@@ -39,7 +41,7 @@
 	{\scshape\Huge Mein erstes LaTex Dokument \par}
 
 	\vspace{5cm}
-	{\Large\itshape ... \par} %Hier deinen Namen eintragen
+	{\Large\itshape Hubert Jaxon \par} %Hier deinen Namen eintragen
 	
 
 \end{title}
@@ -55,20 +57,20 @@
 
 %Hier folgt eine Möglichkeit, etwas in LaTex aufzulisten
 \begin{description}
-\item[Name.]
-... %Hier eintragen
-\item[Alter.] 
-...
-\item[Hobbys.]
-...
-\item[Lieblingsfach.]
-...
-\item[Lieblingsessen.]
-...
-\item[Lieblingsmusik.]
-...
-\item[...] %Eigenen Punkt erstellen
-...
+\item[Name:]
+Hubert Jaxon %Hier eintragen
+\item[Alter:] 
+69
+\item[Hobbys:]
+Essen
+\item[Lieblingsfach:]
+Sachkunde
+\item[Lieblingsessen:]
+Quark
+\item[Lieblingsmusik:]
+Mongolischer Halsgesang
+\item[Lieblingsquark:] %Eigenen Punkt erstellen
+Vollfettquark
 \end{description}
 
 \section{Bild in LaTex}
@@ -81,7 +83,7 @@
 %kannst du eine Bildunterschrift hinzufügen, z.B. die Quelle
 
 \begin{figure}[h]%h = here (t = top; b = bottom; p = page)
-\centering %Hier Befehl eingeben
+\centering\includegraphics[height=50mm]{jaxon.jpeg}\caption{Eine Weide}
 \end{figure}
 
 \section{Arten von Kapiteln}
@@ -97,6 +99,7 @@ Mit \verb|\subsection{Name}| f\"ugst du ein Unterkapitel ein.
 Mit \verb|\subsubsection{Name}| f\"ugst du ein Unterunterkapitel ein.
 
 \section{Textgr\"o\ss e}
+\label{sec:Textgr\"o\ss e}
 
 %Im Dokumentkopf (Zeile 1) legst du die Default-Schriftgröße des Dokuments fest (hier sind das 12pt). Wenn du z.B. auf der Titelseite andere Schriftgrößen verwenden möchtest, 
 %helfen folgende Befehle.
@@ -113,25 +116,25 @@ Mit \verb|\subsubsection{Name}| f\"ugst du ein Unterunterkapitel ein.
 \begin{tabular}{l | l}
 \bf{Gr\"o\ss e} & \bf{Beispiel} \\
 \hline 
-Huge & x\\
+Huge & \Huge Jaxon\\
 \hline
-huge & x\\
+huge & \huge Jaxon\\
 \hline
-LARGE & x\\
+LARGE & \LARGE Jaxon\\
 \hline
-Large & x\\
+Large & \Large Jaxon\\
 \hline 
-large & x\\
+large & \large Jaxon\\
 \hline
-normalsize & x\\
+normalsize & \normalsize Jaxon\\
 \hline
-small & x\\
+small & \small Jaxon\\
 \hline
-footnotesize & x\\
+footnotesize & \footnotesize Jaxon\\
 \hline
-scriptsize & x\\
+scriptsize & \scriptsize Jaxon\\
 \hline
-tiny & x\\
+tiny & \tiny Jaxon\\
 \end{tabular}
 \caption{\label{tab4}Schriftgr\"o\ss en in LaTex }
 \end{table}
@@ -141,7 +144,7 @@ tiny & x\\
 %Erkundige dich im Internet, wie man Farben in LaTex ändern kann.
 %Markiere im folgenden Text beliebige Textpassagen rot, grün, cyan und gelb.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Lorem ipsum dolor sit \textcolor{blue}{amet}, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore \fcolorbox{magenta}{white}{magna} aliqua. Ut enim ad minim veniam, quis \colorbox{myrice}{\textcolor{brown}{nostrud}} exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
 \section{Schriftart}
 
@@ -151,7 +154,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 %Schreibe anschließend Passagen im folgenden Text mit folgenden Schriftarten: Roman (upright) serif , sans serif, typewriter (monospace)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Lorem ipsum dolor sit amet, \textsf{consectetur adipiscing elit,} \texttt{sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.} \textrm{Ut enim ad minim veniam,} \textsf{quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.} \texttt{Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.}
 
 
 \section{Quellcode}
@@ -162,5 +165,74 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 %ausgewählt werden
 
 %Füge in diesem Kapitel entweder einen Quellcode deiner Wahl ein, oder kopiere den Quellcode aus dem Java-Programm im GitHub Ordner:
+
+\begin{lstlisting}[language=Java , caption=Kopfrechentrainer]
+public class Kopfrechentrainer {
+  public static void main (String[] arguments) {
+    int x = Zufall.getInt();
+    int y = Zufall.getInt();
+    System.out.println(x + " + " + y);
+    System.out.println("=");
+    int z = Kon.readInt();
+    int anzahl = 0;
+    
+    while (z == x + y) {
+      anzahl = anzahl + 1;
+      x = Zufall.getInt();
+      y = Zufall.getInt();
+      System.out.println(x + " + " + y);
+      System.out.println("=");
+      z = Kon.readInt();
+    }
+    
+    if (z != x + y) {
+      System.out.println("Da hast du einen Fehler gemacht!");
+      System.out.println(x + " + " + y + " ergibt " + (x + y) + "(!)");
+      System.out.println("Du hast insgesamt " + anzahl + " Aufgaben gelöst.");
+    }
+  }
+}
+\end{lstlisting}
+
+\newpage
+\section{Eigene Projekte}
+\subsection{Tabellen}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline 
+    \multicolumn{3}{|c|}{Titel} \\
+    \hline
+    \multicolumn{2}{|c|}{test} & cell 5 \\
+    \hline
+    cell5 & 2test & cell7 \\
+    \hline
+    \end{tabular}
+    \caption{Tafelreplika}
+    \label{tab:tafelreplika}
+\end{table}
+
+
+An dieser Stelle referenziere ich \ref{tab:tafelreplika}, welche auch eine Tabelle ist.
+An dieser zweiten Stelle referenziere ich \ref{sec:Textgr\"o\ss e}, welches ein Kapitel ist.
+
+
+\subsection{Matheumgebungen}
+
+An dieser Stelle beginnt eine Aufzählung von \texttt{mathematischen Gleichungen}:
+
+\begin{enumerate}
+    \item $a^2 + b^2 = c^2$
+    \item $(a+b)\cdot(a-b)=a^2-b^2$
+    \item $\frac{a}{b}:\frac{c}{d}=\frac{a}{b}\cdot\frac{d}{c}$
+    \item $f(x)=ln(\frac{\frac{x}{2}}{\pi})+\sin{x}$
+    \item $f_{a}(x)=e^{\frac{x^2}{x+2}+2x}+ax$
+    \item $g\prime(x)=2x$
+    \item $\int_{a}^{b} f(x)dx$
+    \item $(\sum\nolimits_{i=1}^n f_{i}(x))^\prime=\sum\nolimits_{i=1}^n f^\prime_{i}(x)$
+    \item \[ (\sum\nolimits_{i=1}^n f_{i}(x))^\prime=\sum\nolimits_{i=1}^n f^\prime_{i}(x) \] 
+\end{enumerate}
+
 
 \end{document}
